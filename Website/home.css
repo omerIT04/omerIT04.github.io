@@ -1,0 +1,676 @@
+/* Universal styles for all elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+
+body {
+	overflow-x: hidden;
+}
+
+/* Header section styling */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 35px 12%;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+/* Logo styling */
+.logo {
+	background-image: url("space.jpg");
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	font-size: 40px;
+	/* Increase font size */
+	font-weight: 900;
+	/* Make the font bold */
+	font-family: sans-serif;
+	line-height: 1.2;
+	/* Adjust line height if necessary */
+	-webkit-text-stroke: 1px darkgray;
+	/* Add a white outline */
+}
+
+/* Logo image styling */
+.logo-img {
+	width: 80px;
+	/* Adjust size as needed */
+	height: auto;
+	/* Maintain aspect ratio */
+	margin-right: 10px;
+	/* Add space between image and text */
+	vertical-align: middle;
+}
+
+/* Logo hover effect */
+.logo:hover {
+	text-shadow: 0 0 25px indigo,
+		0 0 50px indigo;
+	transform: scale(1.1);
+}
+
+
+/* Span inside logo */
+.span {
+	color: indigo;
+}
+
+/* Navbar link styles */
+.navbar a {
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+	font-family: 'Raleway';
+	margin: 0 20px;
+	border-bottom: 3px solid transparent;
+	transition: 0.3s ease;
+}
+
+/* Navbar active link and hover effect */
+.navbar a:hover,
+.navbar a.active {
+	color: lightblue;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Contact button styles */
+.contact {
+	padding: 10px 28px;
+	background-color: white;
+	color: black;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-family: 'Raleway';
+	transition: 0.3s ease;
+}
+
+/* Contact button hover effect */
+.contact:hover {
+	background-color: lightblue;
+	box-shadow: 0 0 25px lightblue;
+	color: white;
+}
+
+/* Home section styles */
+.home {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(to bottom, indigo, #1a1a1a, #000000);
+	display: flex;
+	align-items: center;
+	gap: 7em;
+	padding: 20px 12% 0;
+	padding-top: 30px; /* Adjust the value as needed */
+	margin-top: -20px; /* Adjust the value as needed */
+}
+
+.stars {
+	width: 2px;
+	height: 2px;
+	background: white;
+	position: absolute;
+	border-radius: 50%;
+}
+
+/* Content block inside home section */
+.content {
+	max-width: 800px;
+	color: white;
+}
+
+/* H3 inside home content */
+.content h3 {
+	font-size: 42px;
+	font-family: 'Raleway';
+	color: white;
+	padding: 50px 12% 0;
+
+}
+
+/* Main heading inside home content */
+.content h1 {
+	font-size: 62px;
+	font-family: 'Raleway';
+	line-height: 1.2;
+	color: white;
+}
+
+/* Paragraph inside home content */
+.content p {
+	font-size: 18px;
+	font-family: 'Raleway';
+	margin: 25px 0 30px;
+	color: white;
+}
+
+/* Button box in home section */
+.btn-box {
+	width: 345px;
+	display: flex;
+	gap: 2em;
+}
+
+/* Button 1 style */
+.btn-1 {
+	padding: 15px 28px;
+	background-color: black;
+	color: white;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-family: 'Raleway';
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+/* Button 1 hover effect */
+.btn-1:hover {
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	cursor: default;
+}
+
+/* Button 2 style */
+.btn-2 {
+	padding: 15px 28px;
+	background-color: lightblue;
+	color: black;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-family: 'Raleway';
+	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+/* Button 2 hover effect */
+.btn-2:hover {
+	background-color: royalblue;
+	color: black;
+	font-weight: bold;
+}
+
+/* Image box in home section */
+.img-box img {
+	width: 400px;
+	size: 50px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+/* Scrollbar thumb styles */
+::-webkit-scrollbar-thumb {
+	background-color: lightblue;
+}
+
+/* Scrollbar track styles */
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 50px;
+}
+
+/* About section styles */
+.about {
+	height: 110vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12% 8%;
+	gap: 10em;
+	background: black;
+}
+
+/* About image styles */
+.about-img img {
+	position: relative;
+	width: 500px;
+	filter: drop-shadow(0 0 25px white) drop-shadow(0 0 25px lightblue) drop-shadow(0 0 25px lightpink);
+	border-radius: 50%;
+}
+
+/* About heading */
+.about-content h2 {
+	text-align: left;
+	color: white;
+	font-size: 42px;
+	font-family: 'Raleway';
+}
+
+/* About subheading */
+.about-content h3 {
+	font-size: 62px;
+	color: white;
+	font-family: 'Raleway';
+}
+
+/* About paragraph */
+.about-content p {
+	color: white;
+	font-size: 20px;
+	margin: 2em 0 3em;
+	font-family: 'Raleway';
+}
+
+/* Contact icons section */
+.contact-icons {
+	text-align: center;
+	/* Center the text */
+	margin: 3em 0;
+	/* Margin for spacing */
+}
+
+/* Contact icons heading */
+.contact-icons h2 {
+	font-size: 36px;
+	font-family: 'Raleway';
+	margin-bottom: 1em;
+}
+
+/* Icon box styles */
+.icon-box {
+	display: flex;
+	justify-content: center;
+	/* Center the icons */
+	gap: 2em;
+	/* Space between icons */
+}
+
+/* Icon image styles */
+.icon img {
+	width: 50px;
+	/* Adjust icon size */
+	height: auto;
+	/* Maintain aspect ratio */
+	transition: transform 0.3s;
+	/* Smooth hover effect */
+}
+
+/* Icon hover effect */
+.icon:hover img {
+	transform: scale(1.1);
+	/* Slightly enlarge on hover */
+}
+
+/* Contact section */
+.contact-icons {
+	margin-top: 50px;
+	/* Space above the contact section */
+	clear: both;
+	/* Clears any floating elements */
+	text-align: center;
+	/* Centers the contact section */
+	color: white;
+	background: black;
+	margin-top: 0;
+	margin-bottom: 0;
+	min-height: 100%;
+	padding: 20px;
+}
+
+
+/* Style for each gallery item */
+.gallery {
+	display: inline-block;
+	margin: 5px;
+	width: 200px;
+	height: auto;
+	border: none;
+	line-height: 0;
+	/* Remove extra space */
+	box-shadow: none;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	/* Add transition for smooth effect */
+}
+
+/* Spacing for the gallery section */
+.gallery-item {
+	margin-bottom: 50px;
+	/* Space below the gallery */
+	clear: both;
+	/* Clears any floating elements */
+	margin: 10px;
+}
+
+/* Container for the gallery */
+.gallery-container {
+	display: flex;
+	justify-content: center;
+	/* Center horizontally */
+	flex-wrap: wrap;
+	/* Allow wrapping for multiple rows */
+	gap: 10px;
+	/* Space between gallery items */
+	padding: 20px;
+	/* Padding around the gallery */
+	align-items: flex-start;
+	/* Align items at the top */
+	background: linear-gradient(to bottom right, #E2CFC4, #D6C5D6);
+}
+
+/* Centering the gallery section heading */
+.gallery-title {
+	text-align: center;
+	color: black;
+	font-family: 'Raleway';
+	font-size: 40px;
+	/* Adjust the size as needed */
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 20px;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 100%;
+	background: linear-gradient(to bottom right, #E2CFC4, #D6C5D6);
+}
+
+/* Add a hover effect to the image */
+.gallery img {
+	width: 100%;
+	height: auto;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	/* Smooth transition on hover */
+	border-radius: 60px;
+}
+
+/* Hover effect for the image */
+.gallery img:hover {
+	transform: scale(1.7);
+	/* Slight zoom on hover */
+	box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+	/* Glow effect */
+}
+
+/* Add a hover effect to each gallery item */
+.gallery-item:hover {
+	box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.8);
+	/* Increase glow on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+	.gallery-item {
+		flex-basis: calc(50% - 20px);
+		/* 2 images per row on smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.gallery-item {
+		flex-basis: 100%;
+		/* 1 image per row on very small screens */
+	}
+}
+
+body {
+	cursor: url('websiteicon.png'), auto;
+}
+
+/* Lightbox styling */
+.lightbox {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	/* Semi-transparent black background */
+}
+
+.lightbox-content {
+	display: block;
+	max-width: 90%;
+	max-height: 90%;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: 'Raleway';
+	cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Navigation arrows */
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 16px;
+	margin-top: -22px;
+	/* Centers vertically */
+	user-select: none;
+	/* Disable text selection */
+	transition: 0.3s;
+	/* Smooth hover transition */
+}
+
+/* Left arrow */
+.prev {
+	left: 10px;
+}
+
+/* Right arrow */
+.next {
+	right: 10px;
+}
+
+/* Hover effect for arrows */
+.prev:hover,
+.next:hover {
+	color: #bbb;
+	/* Lighter color on hover */
+}
+
+/* Prices section styling */
+.prices-section {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px; /* Add some padding if desired */
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px; /* Space between title and image */
+    color: black;
+    font-family: 'Raleway';
+}
+
+.prices-section img {
+    width: 600px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better appearance */
+}
+
+.prices-section img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5); /* Glow effect */
+}
+
+
+.faq {
+	margin: 0;
+	padding: 20px;
+	background: linear-gradient(to right, #f2f2f2, #d6d6d6);
+	width: 100%;
+	box-sizing: border-box;
+	/* Ensures padding is part of the total size */
+	display: flex;
+	/* Enable flexbox */
+	flex-direction: column;
+	/* Stack children vertically */
+	align-items: center;
+	/* Center children horizontally */
+}
+
+.question {
+	cursor: pointer;
+	width: 50%;
+	/* Set width for the question */
+	align-items: center;
+	padding: 10px;
+	background-color: lightpink;
+	border: 1px solid lightpink;
+	margin-bottom: 5px;
+	/* Space between questions */
+	text-align: center;
+	font-family: 'Raleway';
+	font-weight: bold;
+	border-radius: 20px;
+}
+
+.question:hover {
+	background-color: lightpink;
+}
+
+.answer {
+	padding: 10px;
+	width: 50%;
+	/* Set width for the answer */
+	background-color: white;
+	border: 1px solid lavender;
+	border-top: none;
+	display: none;
+	/* Initially hidden */
+	text-align: center;
+	font-family: 'Raleway';
+	border-radius: 20px;
+}
+
+.faq h2 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: 'Raleway';
+	color: black;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+/* Footer styles */
+.footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	padding: 40px 0;
+	background-color: black;
+}
+
+/* Social media icons */
+.footer .social a {
+	font-size: 24px;
+	color: white;
+	border: 2px solid indigo;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 8px;
+	box-shadow: inset 0 0 10px indigo 0 0 10px indigo;
+	transition: 0.3s ease;
+}
+
+/* Social media icon hover effect */
+.footer .social a:hover {
+	transform: scale(1.2) translateY(-10px);
+	color: indigo;
+	border: 2px solid indigo;
+}
+
+/* Footer list styles */
+.footer ul {
+	margin-top: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: 'Raleway';
+	line-height: 1.6;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+/* Footer list links */
+.footer ul li a {
+	color: white;
+	border-bottom: 3px solid transparent;
+	transition: 0.3s ease;
+}
+
+/* Footer list links hover effect */
+.footer ul li a:hover {
+	border-bottom: 3px solid indigo;
+}
+
+/* Footer list items */
+.footer ul li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+/* Copyright text */
+.footer .Copyright {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 12px;
+	font-family: 'Raleway';
+	color: white;
+}
+
+html {
+	scroll-behavior: smooth;
+}
