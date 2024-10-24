@@ -5,6 +5,7 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style: none;
+	cursor: url('pawcursor.png'), auto;
 }
 
 
@@ -132,33 +133,34 @@ body {
 
 /* Content block inside home section */
 .content {
-	max-width: 800px;
-	color: white;
+	max-width: 100%;
+	padding: 0 5%;
+	display: flex;
+	flex-direction: column;
 }
-
-/* H3 inside home content */
 .content h3 {
-	font-size: 42px;
-	font-family: 'Raleway';
+	font-size: 32px;
+	padding: 20px 5% 0;
 	color: white;
-	padding: 50px 12% 0;
-
+	font-weight: bold;
+	font-family: raleway;
 }
-
-/* Main heading inside home content */
 .content h1 {
-	font-size: 62px;
-	font-family: 'Raleway';
-	line-height: 1.2;
+	font-size: 48px;
 	color: white;
+	font-weight: bold;
+	font-family: raleway;
 }
-
-/* Paragraph inside home content */
 .content p {
-	font-size: 18px;
-	font-family: 'Raleway';
-	margin: 25px 0 30px;
+	font-size: 16px;
+	margin: 15px 0 20px;
 	color: white;
+	font-weight: bold;
+	font-family: raleway;
+}
+.content img {
+    order: -1; /* This moves the image to the top */
+	size: 50px;
 }
 
 /* Button box in home section */
@@ -673,4 +675,221 @@ body {
 
 html {
 	scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+	/* Adjust Header Padding */
+	.header {
+		padding: 10px 5%;
+	}
+
+	/* Logo size adjustments */
+	.logo {
+		font-size: 30px; /* Reduce font size */
+	}
+
+	.logo-img {
+		width: 60px; /* Reduce logo image size */
+	}
+
+	/* Navbar link adjustments */
+	.navbar a {
+		font-size: 14px; /* Make text smaller */
+		margin: 0 10px; /* Adjust spacing */
+	}
+
+	/* Contact button adjustments */
+	.contact {
+		font-size: 14px;
+		padding: 8px 18px; /* Reduce padding */
+	}
+
+	.home {
+		padding: 40px 5%; /* Increase top padding to create space */
+		gap: 3em; /* Reduce gap between content */
+		display: flex; /* Use flexbox */
+		flex-direction: column; /* Align items in a column */
+		align-items: center; /* Center items horizontally */
+	}
+	
+	.content {
+		width: 100%; /* Ensure content takes full width */
+		min-height: 100vh; /* Set minimum height to full viewport height */
+		display: flex; /* Use flexbox to align content */
+		flex-direction: column; /* Stack content vertically */
+		justify-content: center; /* Center content vertically */
+		align-items: center; /* Center content horizontally */
+		text-align: center; /* Center text */
+		padding: 100px 20px 20px; /* Add padding at the top to lower the content */
+		box-sizing: border-box; /* Ensure padding is included in width/height */
+		overflow: hidden; /* Hide any overflow */
+	}
+	
+	/* Ensure h1 is fully visible */
+	.content h1 {
+		font-size: 30px; /* Adjust size as needed */
+		font-family: raleway;
+		font-weight: bold;
+		color: white;
+		margin: 50px 0 20px; /* Add margin-top to move the h1 lower */
+	}
+	
+	.content h3 {
+		font-size: 25px; /* Smaller heading */
+		font-family: raleway;
+		font-weight: bold;
+		color: white;
+		margin: 10px 0; /* Add margin for spacing */
+	}
+	
+	.content p {
+		font-size: 20px; /* Smaller paragraph text */
+		font-family: raleway;
+		font-weight: bold;
+		color: white;
+		margin: 10px 0; /* Add margin for spacing */
+	}
+	
+	
+	.content .btn-1 {
+		margin: 20px auto; /* Center the button horizontally */
+		padding: 10px 20px;
+		font-size: 18px;
+		font-family: raleway;
+		background-color: black;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		display: block;
+		width: 50%; /* Full width buttons */
+	}
+	
+	 .btn-2 {
+		margin: 20px auto; /* Center the button horizontally */
+		padding: 10px 20px;
+		font-size: 18px;
+		font-family: raleway;
+		background-color: black;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		display: block;
+		width: 50%; /* Full width buttons */
+	}
+
+	/* Image box in home section */
+	.img-box img {
+		display: block;
+	}
+
+	@media screen and (max-width: 600px) {
+		.img-box img {
+			display: none;
+		}
+	}
+
+	/* About section adjustments */
+	.about {
+		flex-direction: column; /* Stack image and text */
+		padding: 20px 5%; /* Adjust padding */
+		gap: 2em; /* Reduce gap */
+	}
+	.about-img img {
+		width: 100%; /* Full width image */
+		max-width: 250px; /* Limit maximum size */
+	}
+
+		/* About heading */
+	.about-content h2 {
+		text-align: left;
+		color: white;
+		font-size: 32px;
+		font-family: 'Raleway';
+	}
+
+	/* About subheading */
+	.about-content h3 {
+		font-size: 50px;
+		color: white;
+		font-family: 'Raleway';
+	}
+
+	/* About paragraph */
+	.about-content p {
+		color: white;
+		font-size: 15px;
+		margin: 2em 0 3em;
+		font-family: 'Raleway';
+	}
+
+	/* Contact section adjustments */
+	.contact-icons h2 {
+		font-size: 28px; /* Reduce heading size */
+	}
+
+	.icon-box {
+		gap: 1em; /* Reduce space between icons */
+	}
+
+	.icon img {
+		width: 40px; /* Reduce icon size */
+	}
+	.gallery-container {
+		padding: 10px 5%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between; /* Ensure images are spaced out */
+	  }
+	  
+	  .gallery {
+		width: 45%; /* Adjust width to fit two images per row with padding */
+		margin-bottom: 10px; /* Add some space below each image */
+	  }
+	  
+	  .gallery img {
+		border-radius: 20px;
+		width: 100%;
+		height: auto;
+	  }
+	
+
+	/* Prices section adjustments */
+	.prices-section img {
+		width: 100%; /* Full width images */
+		max-width: 300px; /* Limit maximum size */
+	}
+
+	/* FAQ section adjustments */
+	.faq {
+		padding: 10px 5%; /* Adjust padding */
+	}
+	.question, .answer {
+		width: 90%; /* Increase width */
+		font-size: 14px; /* Reduce font size */
+	}
+
+	/* Footer adjustments */
+	.footer {
+		padding: 20px 0;
+	}
+
+	.footer .social a {
+		width: 30px;
+		height: 30px;
+		line-height: 28px; /* Adjust icon size */
+	}
+
+	.footer ul {
+		font-size: 14px; /* Reduce text size */
+	}
+
+	.footer ul li {
+		padding: 0 10px; /* Adjust spacing */
+	}
+
+	.Copyright {
+		font-size: 10px; /* Smaller copyright text */
+	}
 }
