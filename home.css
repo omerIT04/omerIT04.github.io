@@ -5,7 +5,6 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style: none;
-	cursor: url('pawcursor.png'), auto;
 }
 
 
@@ -19,7 +18,7 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 35px 12%;
+	padding: 20px 12%;
 	background: rgba(0, 0, 0, 0.8);
 	backdrop-filter: blur(10px);
 	display: flex;
